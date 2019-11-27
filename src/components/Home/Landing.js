@@ -1,4 +1,5 @@
 import React from "react";
+import "./Landing.scss";
 import { NavLink } from "react-router-dom";
 
 function Landing() {
@@ -7,11 +8,8 @@ function Landing() {
       {/* <!-- landing page --> */}
       <div id="home">
         <div id="home-text">
+          <h1>Peachy Rabbit Studio</h1>
           <h2>Adelaide Event Photographers</h2>
-          <h3>
-            Peachy Rabbit Studio is your first choice for your event
-            photographers
-          </h3>
         </div>
       </div>
     </div>
