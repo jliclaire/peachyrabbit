@@ -1,0 +1,43 @@
+// css way to define variables
+// :root {
+//   --main-bg-color: #f1f3f4;
+//   --main-dark-color: #141b24;
+//   --main-font-header: "Tiempos Headline", serif;
+//   --main-font-body: Arial, "Nunito Sans", -apple-system, BlinkMacSystemFont,
+//     "Segoe UI", Roboto, "Helvetica Neue", sans-serif, "Apple Color Emoji",
+//     "Segoe UI Emoji", "Segoe UI Symbol";
+// }
+
+$main-bg-color: #f1f3f4;
+$main-dark-color: #141b24;
+$main-font-header: "Tiempos Headline", serif;
+$main-font-body: Arial, "Nunito Sans", -apple-system, BlinkMacSystemFont,
+  "Segoe UI", Roboto, "Helvetica Neue", sans-serif, "Apple Color Emoji",
+  "Segoe UI Emoji", "Segoe UI Symbol";
+
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: $main-font-body;
+  background-color: $main-bg-color;
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5 {
+    font-family: $main-font-header;
+  }
+
+  /* font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale; */
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}

@@ -1,9 +1,10 @@
 import React from "react";
+import "./Contact.css";
 
 function Contact() {
   return (
     <div className="contact-container">
-      <h1>Contanct Us</h1>
+      <h1>Contact Us</h1>
       <div id="contact-form">
         <h3>Get In Touch</h3>
         <form
