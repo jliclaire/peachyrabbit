@@ -1,6 +1,7 @@
 import React from "react";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import "./App.scss";
+import logo from "./img/logo.JPG";
 import Home from "./components/Home/Home";
 import Gallery from "./components/Gallery/Gallery";
 // import About from "./components/Home/About";
@@ -8,6 +9,9 @@ import Gallery from "./components/Gallery/Gallery";
 function App() {
   return (
     <Router>
+      <div className="logo">
+        <img src={logo} width="250" height="80" />
+      </div>
       <div>
         <ul>
           <li>

@@ -8,32 +8,32 @@ function Contact() {
       <div id="contact-form">
         <h3>Get In Touch</h3>
         <form
-          class="form"
+          className="form"
           action="https://formspree.io/jingli.claire@gmail.com"
           method="POST"
         >
-          <div class="name-content">
+          <div className="name-content">
             <input
               type="text"
-              class="name border"
+              className="name border"
               name="first-name"
               placeholder="First Name"
             />
             <input
               type="text"
-              class="name border"
+              className="name border"
               name="last-name"
               placeholder="Last Name"
             />
           </div>
           <input
             type="email"
-            class="email border"
+            className="email border"
             name="email"
             placeholder="Email"
           />
           <textarea
-            class="message border"
+            className="message border"
             name="message"
             placeholder="Message"
           ></textarea>
