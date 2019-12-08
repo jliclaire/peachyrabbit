@@ -1,7 +1,6 @@
 import React from "react";
 import "./Landing.scss";
-import { NavLink } from "react-router-dom";
-import landingBackgroundImg from "../../img/landing-bg.jpg";
+import landingBackgroundImg from "../../img/landing-bg-2.jpg";
 
 function Landing() {
   const landingImg = {

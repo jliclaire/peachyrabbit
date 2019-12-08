@@ -8,8 +8,9 @@
 //     "Segoe UI Emoji", "Segoe UI Symbol";
 // }
 
-$main-bg-color: #f1f3f4;
-$main-dark-color: #141b24;
+// $main-bg-color: #f1f3f4;
+$main-bg-color: #141b24;
+$main-dark-color: #fff;
 $main-font-header: "Tiempos Headline", serif;
 $main-font-body: Arial, "Nunito Sans", -apple-system, BlinkMacSystemFont,
   "Segoe UI", Roboto, "Helvetica Neue", sans-serif, "Apple Color Emoji",
@@ -21,13 +22,14 @@ body {
   box-sizing: border-box;
   font-family: $main-font-body;
   background-color: $main-bg-color;
-
+  color: $main-dark-color;
   h1,
   h2,
   h3,
   h4,
   h5 {
     font-family: $main-font-header;
+    text-align: center;
   }
 
   /* font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
