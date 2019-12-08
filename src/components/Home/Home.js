@@ -3,14 +3,19 @@ import About from "./About";
 import Contact from "./Contact";
 import Price from "./Price";
 import Landing from "./Landing";
+import HomeGallery from "./HomeGallery";
+import "./Home.scss";
 
 function Home() {
   return (
     <div className="home-container">
       <Landing />
-      <About />
-      <Price />
-      <Contact />
+      <div className="main-container">
+        <HomeGallery />
+        <About />
+        <Price />
+        <Contact />
+      </div>
     </div>
   );
 }
