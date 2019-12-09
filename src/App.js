@@ -11,28 +11,30 @@ import "./App.scss";
 function App() {
   return (
     <HashRouter>
-      <div className="logo">
-        <img src={logo} width="250" height="80" />
+      <div className="navbar">
+        <div className="logo">
+          <img src={logo} />
+        </div>
+        <ul className="nav-menu">
+          <li className="nav-items">
+            <NavLink exact to="/">
+              Home
+            </NavLink>
+          </li>
+          <li className="nav-items">
+            <NavLink to="/gallery">Gallery</NavLink>
+          </li>
+          <li className="nav-items">
+            <NavLink to="/about">About</NavLink>
+          </li>
+          <li className="nav-items">
+            <NavLink to="/price">Price</NavLink>
+          </li>
+          <li className="nav-items">
+            <NavLink to="/contact">Contact</NavLink>
+          </li>
+        </ul>
       </div>
-      <ul className="nav-menu">
-        <li className="nav-items">
-          <NavLink exact to="/">
-            Home
-          </NavLink>
-        </li>
-        <li className="nav-items">
-          <NavLink to="/gallery">Gallery</NavLink>
-        </li>
-        <li className="nav-items">
-          <NavLink to="/about">About</NavLink>
-        </li>
-        <li className="nav-items">
-          <NavLink to="/price">Price</NavLink>
-        </li>
-        <li className="nav-items">
-          <NavLink to="/contact">Contact</NavLink>
-        </li>
-      </ul>
 
       <div className="content">
         <Route exact path="/" component={Home}></Route>
