@@ -3,7 +3,9 @@ import About from "./About";
 import Contact from "./Contact";
 import Price from "./Price";
 import Landing from "./Landing";
-import HomeGallery from "./HomeGallery";
+import Gallery from "./Gallery";
+import Footer from "./Footer";
+import LandingMiddle from "./LandingMiddle";
 import "./Home.scss";
 
 function Home() {
@@ -11,11 +13,15 @@ function Home() {
     <div className="home-container">
       <Landing />
       <div className="main-container">
-        <HomeGallery />
+        <Gallery />
+      </div>
+      <LandingMiddle />
+      <div className="main-container">
         <About />
         <Price />
         <Contact />
       </div>
+      <Footer />
     </div>
   );
 }

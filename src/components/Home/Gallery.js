@@ -5,14 +5,14 @@ import galleryImg3 from "../../img/gallery-image-3.jpg";
 import galleryImg4 from "../../img/gallery-image-4.jpg";
 import galleryImg5 from "../../img/gallery-image-5.jpg";
 import galleryImg6 from "../../img/gallery-image-6.jpg";
-import "./HomeGallery.scss";
+import "./Gallery.scss";
 
-function HomeGallery() {
+function Gallery() {
   return (
-    <div className="home-gallery-container">
+    <div className="gallery-container">
       <h1>Our Work</h1>
       <p>Find out more in our Gallery</p>
-      <div className="home-gallery-grid">
+      <div className="gallery-grid">
         <img src={galleryImg1} />
         <img src={galleryImg2} />
         <img src={galleryImg3} />
@@ -27,4 +27,4 @@ function HomeGallery() {
   );
 }
 
-export default HomeGallery;
+export default Gallery;

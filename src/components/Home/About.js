@@ -4,7 +4,7 @@ import "./About.scss";
 
 function About() {
   return (
-    <div className="about-container">
+    <div id="about" className="about-container">
       <h1>About Us</h1>
       <p>
         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod

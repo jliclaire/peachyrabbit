@@ -7,8 +7,6 @@ function Landing() {
     backgroundImage: `url(${landingBackgroundImg})`
   };
 
-  console.log(landingImg);
-
   return (
     <div className="landing-container">
       {/* <!-- landing page --> */}

@@ -1,43 +1,47 @@
 import React from "react";
-import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
-import "./App.scss";
+import { Route, NavLink, HashRouter } from "react-router-dom";
 import logo from "./img/logo.JPG";
 import Home from "./components/Home/Home";
-import Gallery from "./components/Gallery/Gallery";
-// import About from "./components/Home/About";
+import Contact from "./components/Home/Contact";
+import Price from "./components/Home/Price";
+import Gallery from "./components/Home/Gallery";
+import About from "./components/Home/About";
+import "./App.scss";
 
 function App() {
   return (
-    <Router>
+    <HashRouter>
       <div className="logo">
         <img src={logo} width="250" height="80" />
       </div>
-      <div>
-        <ul>
-          <li>
-            <Link to="/">Home</Link>
-          </li>
-          {/* <li>
-            <Link to="/about">About</Link>
-          </li> */}
-          <li>
-            <Link to="/gallery">Gallery</Link>
-          </li>
-        </ul>
+      <ul className="nav-menu">
+        <li className="nav-items">
+          <NavLink exact to="/">
+            Home
+          </NavLink>
+        </li>
+        <li className="nav-items">
+          <NavLink to="/gallery">Gallery</NavLink>
+        </li>
+        <li className="nav-items">
+          <NavLink to="/about">About</NavLink>
+        </li>
+        <li className="nav-items">
+          <NavLink to="/price">Price</NavLink>
+        </li>
+        <li className="nav-items">
+          <NavLink to="/contact">Contact</NavLink>
+        </li>
+      </ul>
 
-        <Switch>
-          <Route path="/gallery">
-            <Gallery />
-          </Route>
-          {/* <Route path="/about">
-            <About />
-          </Route> */}
-          <Route path="/" exact>
-            <Home />
-          </Route>
-        </Switch>
+      <div className="content">
+        <Route exact path="/" component={Home}></Route>
+        <Route path="/gallery" component={Gallery}></Route>
+        <Route path="/about" component={About}></Route>
+        <Route path="/price" component={Price}></Route>
+        <Route path="/contact" component={Contact}></Route>
       </div>
-    </Router>
+    </HashRouter>
   );
 }
 

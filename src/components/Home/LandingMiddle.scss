@@ -1,0 +1,13 @@
+$text-color-light: #f1f3f4;
+
+#home {
+  display: flex;
+  align-items: center;
+  margin-top: 30px;
+  height: 100vh;
+  background-position: center;
+  background-size: cover;
+  background-repeat: none;
+  background-attachment: fixed;
+  color: $text-color-light;
+}
