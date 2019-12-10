@@ -10,7 +10,7 @@ function LandingMiddle() {
   return (
     <div className="landing-container">
       {/* <!-- landing page --> */}
-      <div id="home" style={landingImg}></div>
+      <div id="landing-middle" style={landingImg}></div>
     </div>
   );
 }
