@@ -8,43 +8,69 @@ import Gallery from "./components/Home/Gallery";
 import About from "./components/Home/About";
 import "./App.scss";
 
-function App() {
-  return (
-    <HashRouter>
-      <div className="navbar">
-        <div className="logo">
-          <img src={logo} />
-        </div>
-        <ul className="nav-menu">
-          <li className="nav-items">
-            <NavLink exact to="/">
-              Home
-            </NavLink>
-          </li>
-          <li className="nav-items">
-            <NavLink to="/gallery">Gallery</NavLink>
-          </li>
-          <li className="nav-items">
-            <NavLink to="/about">About</NavLink>
-          </li>
-          <li className="nav-items">
-            <NavLink to="/price">Price</NavLink>
-          </li>
-          <li className="nav-items">
-            <NavLink to="/contact">Contact</NavLink>
-          </li>
-        </ul>
-      </div>
+class App extends React.Component {
+  state = {
+    darkNavbar: false
+  };
 
-      <div className="content">
-        <Route exact path="/" component={Home}></Route>
-        <Route path="/gallery" component={Gallery}></Route>
-        <Route path="/about" component={About}></Route>
-        <Route path="/price" component={Price}></Route>
-        <Route path="/contact" component={Contact}></Route>
-      </div>
-    </HashRouter>
-  );
+  componentDidMount = () => {
+    window.addEventListener("scroll", this.changeNavbarBackgroundOnScroll);
+  };
+
+  changeNavbarBackgroundOnScroll = () => {
+    const distanceY = window.pageYOffset;
+
+    if (distanceY > 0) {
+      this.setState({ darkNavbar: true });
+    } else {
+      this.setState({ darkNavbar: false });
+    }
+  };
+
+  render() {
+    return (
+      <HashRouter>
+        <nav
+          className={
+            this.state.darkNavbar
+              ? "navbar background-dark"
+              : "navbar background-transparent"
+          }
+        >
+          <div className="logo">
+            <img src={logo} />
+          </div>
+          <ul className="nav-menu">
+            <li className="nav-items">
+              <NavLink exact to="/">
+                Home
+              </NavLink>
+            </li>
+            <li className="nav-items">
+              <NavLink to="/gallery">Gallery</NavLink>
+            </li>
+            <li className="nav-items">
+              <NavLink to="/about">About</NavLink>
+            </li>
+            <li className="nav-items">
+              <NavLink to="/price">Price</NavLink>
+            </li>
+            <li className="nav-items">
+              <NavLink to="/contact">Contact</NavLink>
+            </li>
+          </ul>
+        </nav>
+
+        <div className="content">
+          <Route exact path="/" component={Home}></Route>
+          <Route path="/gallery" component={Gallery}></Route>
+          <Route path="/about" component={About}></Route>
+          <Route path="/price" component={Price}></Route>
+          <Route path="/contact" component={Contact}></Route>
+        </div>
+      </HashRouter>
+    );
+  }
 }
 
 export default App;

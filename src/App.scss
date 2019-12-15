@@ -1,12 +1,11 @@
+$main-bg-color: #141b24;
 .navbar {
   position: fixed;
   top: 0;
-  margin-bottom: -30px;
   width: 100%;
   height: 70px;
   display: flex;
   justify-content: space-between;
-  background: #fff;
 
   .logo {
     width: 20%;
@@ -30,8 +29,16 @@
 
       a {
         text-decoration: none;
-        color: #000;
+        color: #fff;
       }
     }
   }
+}
+
+.background-transparent {
+  background-color: transparent;
+}
+
+.background-dark {
+  background-color: $main-bg-color;
 }
